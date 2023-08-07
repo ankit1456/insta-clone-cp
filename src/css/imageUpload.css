@@ -1,0 +1,69 @@
+.create {
+  margin: 15px auto;
+  padding: 15px;
+  border: 1px solid #cdcccc;
+  border-radius: 3px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.create__input {
+  height: 40px;
+  padding: 0 13px;
+  border: 1px solid #efefef;
+  outline: none;
+  border-radius: 8px;
+}
+.imageupload__progress {
+  margin: 10px;
+}
+.imageupload__progress progress {
+  width: 100%;
+}
+
+.create__input > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px;
+  margin-left: -13px;
+  border-radius: 8px;
+}
+
+.create__imgPreview {
+  width: 100%;
+  object-fit: contain;
+  border: 1px solid lightgray;
+}
+.create__second {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.file {
+  display: none;
+}
+.camera {
+  color: #f83a63;
+  font-size: 30px;
+  cursor: pointer;
+}
+.create__second-a {
+  flex: 1;
+}
+.create__second-b {
+  flex: 1;
+  text-align: right;
+}
+.btn-sweet {
+  letter-spacing: 1px;
+  font-weight: 500;
+  background: #f83a63;
+  text-decoration: none;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fff;
+}
