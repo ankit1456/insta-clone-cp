@@ -17,6 +17,7 @@ import { Modal, Fade, Box, Backdrop, Button, Input } from "@mui/material";
 import { FirebaseError } from "@firebase/util";
 import { AUTH_TYPE } from "./models/authType";
 import ImageUpload from "./components/ImageUpload";
+import Stories from "./components/Stories";
 
 const style = {
   position: "absolute",
@@ -184,7 +185,6 @@ function App() {
           </Box>
         </Fade>
       </Modal>
-
       <div className="app__header">
         <div className="app__headerContainer">
           <img
@@ -220,13 +220,12 @@ function App() {
           )}
         </div>
       </div>
-
+      <Stories />
       {user?.displayName ? (
         <ImageUpload username={user.displayName} />
       ) : (
         <h4>Sorry ,You need to login to upload and to add comment🙂</h4>
       )}
-
       <div className="app__posts">
         {posts?.map((post) => (
           <Post postId={post.id} key={post.id} post={post} user={user} />

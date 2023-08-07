@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../css/stories.css";
 
 const Stories = () => {
-  const [state] = useState([
+  const [stories] = useState([
     {
       id: 1,
       image:
@@ -61,14 +61,14 @@ const Stories = () => {
   ]);
   return (
     <div className="stories">
-      {state.map((user) => (
-        <div className="stories__info" key={user.id}>
+      {stories.map((story) => (
+        <div className="stories__info" key={story.id}>
           <div className="stories__img">
             <span>
-              <img src={user.image} alt="user" />
+              <img src={story.image} alt={story.name} />
             </span>
           </div>
-          <div className="stories__name">{user.name}</div>
+          <div className="stories__name">{story.name}</div>
         </div>
       ))}
     </div>
