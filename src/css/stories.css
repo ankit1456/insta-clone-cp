@@ -2,7 +2,7 @@
   display: flex;
   background: #fff;
   padding: 15px 10px;
-  width: 100%;
+  width: 90%;
   max-width: 900px;
   border-radius: 3px;
   border: 1px solid #efefef;
@@ -13,6 +13,13 @@
   position: sticky;
   top: 77px;
   z-index: 1;
+}
+
+@media (max-width: 400px) {
+  .stories {
+    position: sticky;
+    top: 67px;
+  }
 }
 .stories::-webkit-scrollbar {
   width: 0;

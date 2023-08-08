@@ -7,6 +7,11 @@
   max-width: 400px;
 }
 
+@media (max-width: 400px) {
+  .create {
+    margin: 15px 5px;
+  }
+}
 .create__input {
   height: 40px;
   padding: 0 13px;

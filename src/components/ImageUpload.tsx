@@ -43,7 +43,7 @@ const ImageUpload = ({ username }: ImageUploadProps) => {
     e.preventDefault();
 
     if (!image) {
-      alert("Please choose a file");
+      alert("Please choose a image");
       return;
     }
 
