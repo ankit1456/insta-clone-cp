@@ -1,18 +1,17 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCXsVQjoD9uYEu-EqO3ETaVtjpum61vm5I",
-  authDomain: "insta-clone-cp-c9859.firebaseapp.com",
-  projectId: "insta-clone-cp-c9859",
-  storageBucket: "insta-clone-cp-c9859.appspot.com",
-  messagingSenderId: "551712881024",
-  appId: "1:551712881024:web:89d70204deeb89c2f4a965",
-  measurementId: "G-ZR63J6977R",
+  apiKey: "AIzaSyCMyhPJLKPmiYgfNSk2bEdx3MpcZHlzBhs",
+  authDomain: "insta-clone-cp-a4ccd.firebaseapp.com",
+  projectId: "insta-clone-cp-a4ccd",
+  storageBucket: "insta-clone-cp-a4ccd.appspot.com",
+  messagingSenderId: "1074562439244",
+  appId: "1:1074562439244:web:f810e710551ef9356ffce9",
+  measurementId: "G-G5TCRM1ZY4"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);

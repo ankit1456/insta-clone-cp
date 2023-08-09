@@ -39,6 +39,7 @@ const btnStyle = {
 
 function App() {
   const [posts, setPosts] = useState<PostModel[]>([]);
+  const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -52,6 +53,7 @@ function App() {
   };
   const handleClose = () => setOpen(false);
   useEffect(() => {
+    setLoading(true);
     const unsubscribe = onSnapshot(
       query(collection(db, "posts"), orderBy("timestamp", "desc")),
       (snapshot) => {
@@ -61,11 +63,15 @@ function App() {
             id: doc.id,
           })) as PostModel[];
           setPosts(newPosts);
+          setLoading(false);
         } catch (error) {
+          setLoading(false);
+
           console.error("Error fetching posts:", error);
         }
       },
       (error) => {
+        setLoading(false);
         console.error("Error subscribing to posts:", error);
       }
     );
@@ -227,9 +233,11 @@ function App() {
         <h4>Sorry ,You need to login to upload and to add comment🙂</h4>
       )}
       <div className="app__posts">
-        {posts?.map((post) => (
-          <Post postId={post.id} key={post.id} post={post} user={user} />
-        ))}
+        {loading
+          ? "Loading..."
+          : posts?.map((post) => (
+              <Post postId={post.id} key={post.id} post={post} user={user} />
+            ))}
       </div>
     </div>
   );
